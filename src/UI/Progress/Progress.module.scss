@@ -1,0 +1,56 @@
+@import '../../color/color';
+.layout{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $white;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p{
+        font-size: 20px;
+        margin: 0;
+    }
+    .progress{
+        width: 250px;
+        height: 3px;
+        background: #ccc;
+        position: relative;
+        &:before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 3px;
+            animation: progress 1.5s ease-in-out forwards;
+        }
+    }
+    transition: all .5s;
+}
+
+@keyframes progress {
+    0%{
+        width: 0px;
+        background: $white;
+    }
+    25%{
+        width: calc(250px / 4);
+        background: $blue;
+    }
+    50%{
+        width: calc((250px / 4) * 2);
+        background: $green;
+    }
+    75%{
+        width: calc((250px / 4) * 3);
+        background: $yellow;
+    }
+    100%{
+        width: 250px;
+        background: $red;
+    }
+}
