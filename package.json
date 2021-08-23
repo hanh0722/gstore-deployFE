@@ -33,6 +33,7 @@
     "react-scripts": "4.0.3",
     "react-transition-group": "^4.4.2",
     "react-tsparticles": "^1.33.2",
+    "sass": "^1.38.0",
     "swiper": "^6.7.5",
     "typescript": "^4.3.5",
     "web-vitals": "^1.1.2"
